@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Lab6_0505_Marmara</string>
+    <string-array name="transaction_types">
+        <item>Gelir</item>
+        <item>Gider</item>
+    </string-array>
 </resources>
