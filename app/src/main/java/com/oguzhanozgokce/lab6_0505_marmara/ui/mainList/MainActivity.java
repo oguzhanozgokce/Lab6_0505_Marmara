@@ -19,6 +19,7 @@ import com.oguzhanozgokce.lab6_0505_marmara.R;
 import com.oguzhanozgokce.lab6_0505_marmara.databinding.ActivityMainBinding;
 import com.oguzhanozgokce.lab6_0505_marmara.domain.Transaction;
 import com.oguzhanozgokce.lab6_0505_marmara.ui.add.AddActivity;
+import com.oguzhanozgokce.lab6_0505_marmara.ui.update.UpdateActivity;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTitle("Seçiminiz")
                 .setItems(options, (dialog, which) -> {
                     if (which == 0) {
-                        Intent intent = new Intent(this, AddActivity.class);
+                        Intent intent = new Intent(this, UpdateActivity.class);
                         intent.putExtra("transaction_id", t.getId());
                         intent.putExtra("person_name", t.getPersonName());
                         intent.putExtra("transaction_type", t.getTransactionType());

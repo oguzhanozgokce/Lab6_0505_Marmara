@@ -32,6 +32,12 @@ public class TransactionRepositoryImpl implements TransactionRepository {
     }
 
     @Override
+    public void updateTransaction(Transaction transaction) {
+        var entity = TransactionMapper.toEntity(transaction);
+        dao.update(entity);
+    }
+
+    @Override
     public List<Transaction> getAllTransactions() {
         var entities = dao.getAll();
         return TransactionMapper.toDomainList(entities);
